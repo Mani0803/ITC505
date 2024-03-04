@@ -1,0 +1,56 @@
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        article {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+            padding: 15px; /* Add padding to each paragraph */
+            border-radius: 8px; /* Add rounded corners to padding */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow effect */
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+        footer p {
+            margin: 0;
+        }
+        /* Different background colors for padding */
+        p:nth-of-type(odd) {
+            background-color: #ffb6c1; /* Light Pink */
+        }
+        p:nth-of-type(2n) {
+            background-color: #87cefa; /* Light Sky Blue */
+        }
+        p:nth-of-type(3n) {
+            background-color: #90ee90; /* Light Green */
+        }
+        p:nth-of-type(4n) {
+            background-color: #ffd700; /* Gold */
+        }
+        p:nth-of-type(5n) {
+            background-color: #ff7f50; /* Coral */
+        }
