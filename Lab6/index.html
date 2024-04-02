@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail with JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>------ The Number Sorter ------</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Sort a List of Numbers</h2>
+        <p>Enter a comma-separated list of numbers in the box below and click the 'Sort' button to sort them in ascending order.</p>
+        <input type="text" id="numberInput" placeholder="Enter comma-separated numbers">
+        <button id="sortButton">Sort</button>
+        <p id="sortedOutput"></p>
+    </main>
+    <aside>
+        <a href="https://www.amazon.com/s?k=toys&ref=nb_sb_noss"> 
+            <img src="https://m.media-amazon.com/images/I/71Wt1thqZEL._AC_SY300_SX300_.jpg" alt="Advertisement">
+        </a>
+    </aside>
+    <script>const sortButton = document.getElementById('sortButton');
+        const numberInput = document.getElementById('numberInput');
+        const sortedOutput = document.getElementById('sortedOutput');
+        
+        sortButton.addEventListener('click', function() {
+          const numbersString = numberInput.value;
+          if (!numbersString) {
+            return;
+          }
+        
+          const numbers = numbersString.split(',').map(Number);
+          numbers.sort((a, b) => a - b);
+          const sortedNumbersString = numbers.join(', ');
+        
+          sortedOutput.textContent = `Sorted List: ${sortedNumbersString}`;
+        });
+        </script>
+        <script>
+            sortButton.addEventListener('click', function() {
+    const numbersString = numberInput.value;
+    if (!numbersString) {
+      return;
+    }
+  
+    // Split the string into an array of numbers, converting each string to a number
+    const numbers = numbersString.split(',').map(num => Number(num));
+  
+    // Implementing the bubble sort algorithm
+    for (let i = 0; i < numbers.length - 1; i++) {
+      for (let j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] > numbers[j + 1]) {
+          // Swap numbers[j] and numbers[j + 1]
+          let temp = numbers[j];
+          numbers[j] = numbers[j + 1];
+          numbers[j + 1] = temp;
+        }
+      }
+    }
+  
+    const sortedNumbersString = numbers.join(', ');
+  
+    sortedOutput.textContent = `Sorted List: ${sortedNumbersString}`;
+  });
+        </script>
+        <footer>
+            <p>Last updated: 
+                <span id="lastModified"></span>
+            <p>Addendum: This JavaScript code implements the Bubble Sort algorithm to sort an array of integers. It responds to a button click event, sorts the array, and displays the sorted result. The main difficulty encountered was ensuring the correct implementation of the sorting algorithm.</p>
+            </p>
+        </footer>
+        <script type="text/javascript">
+             var x = document.lastModified;
+             document.getElementById('lastModified').textContent = x;
+        </script>
+</body>
+</html>
