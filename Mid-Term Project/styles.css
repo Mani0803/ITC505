@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #222;
+    animation: move 5s infinite alternate;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#story {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+}
+
+#game-interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fire-button {
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#fire-button:hover {
+    background-color: #0056b3;
+}
+
+#enemy {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#image-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.image-option {
+    width: 200px;
+    height: 200px;
+    background-color: #444;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.image-option:hover {
+    opacity: 0.7;
+}
+
+#addendum {
+    display: none;
+}
+
+/* Existing CSS code */
+
+#image-options {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.image-option {
+    width: 200px;
+    height: 200px;
+    background-color: #444;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.image-option:hover {
+    opacity: 0.7;
+}
